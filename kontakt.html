@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Predlagač filmova </title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/x-icon" href="/img/logo1.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="search.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"
+        integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="header">
+        <label for="chk" class="show-btn" style="position: sticky;">
+            <i class="fa fa-bars"></i>
+        </label>
+        <label for="chk" class="hide-btn" style="position: sticky;">
+            <i class="fa fa-times"></i>
+        </label>
+
+    </div>
+
+    <input type="checkbox" name="" id="chk" style="display:none">
+
+    <div class="content">
+        <br><br>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div style="width: 100%"><iframe width="100%" height="600" frameborder="0" scrolling="no"
+                            marginheight="0" marginwidth="0"
+                            src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Novi%20Sad,%20Serbia+(Novi%20Sad)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a
+                                href="https://www.gps.ie/wearable-gps/">adventure gps</a></iframe></div>
+                </div><br>
+                <div class="col-md-8">
+                    <div class="card">
+                        <!--Card content-->
+                        <div class="kontakt">
+                            <div class="card-body">
+
+                                <h2>Ostanimo u kontaktu</h2>
+                                <div class="row">
+                                    <!--Grid column-->
+                                    <div class="col-md-9 mb-md-0 mb-5">
+                                        <form id="contact-form" name="contact-form" action="" method="POST">
+                                            <!--Grid row-->
+                                            <div class="row">
+                                                <!--Grid column-->
+                                                <div class="col-md-6">
+                                                    <div class="md-form mb-0">
+                                                        <input type="text" id="name" name="name" class="form-control"
+                                                            required>
+                                                        <label for="name">Ime i prezime:</label>
+                                                    </div>
+                                                </div>
+                                                <!--Grid column-->
+
+                                                <!--Grid column-->
+                                                <div class="col-md-6">
+                                                    <div class="md-form mb-0">
+                                                        <input type="text" id="email" name="email" class="form-control"
+                                                            required>
+                                                        <label for="email">E-mail:</label>
+                                                    </div>
+                                                </div>
+                                                <!--Grid column-->
+
+                                            </div>
+                                            <!--Grid row-->
+
+                                            <!--Grid row-->
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="md-form mb-0">
+                                                        <input type="text" id="subject" name="subject"
+                                                            class="form-control" required>
+                                                        <label for="subject">Naslov</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--Grid row-->
+
+                                            <!--Grid row-->
+                                            <div class="row">
+
+                                                <!--Grid column-->
+                                                <div class="col-md-12">
+                                                    <div class="md-form">
+                                                        <textarea type="text" id="message" name="message" rows="2"
+                                                            class="form-control md-textarea" required placeholder="Ako želite još predloga, javite se!"></textarea>
+                                                        <label for="message" ">Poruka</label>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <!--Grid row-->
+
+                                        </form>
+
+                                        <div class="text-center text-md-left">
+                                            <button type="submit" class="btn btn-dark" onclick="alert('Vaša poruka je poslata!')">Pošalji</button>
+                                        </div>
+                                        <div class="status"></div>
+                                    </div>
+                                    <!--Grid column-->
+
+                                    <!--Grid column-->
+                                    <div class="col-md-3 text-center">
+                                        <ul class="list-unstyled mb-0">
+                                            <li><i class="fas fa-map-marker-alt fa-2x"></i>
+                                                <p>Novi Sad, Srbija</p>
+                                            </li>
+
+                                            <li><i class="fas fa-phone mt-4 fa-2x"></i>
+                                                <p>+ 381 63 123 456</p>
+                                            </li>
+
+                                            <li><i class="fas fa-envelope mt-4 fa-2x"></i>
+                                                <p>contact@filmovi.com</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!--Grid column-->
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    <div class="sidebar">
+        <img class="response logo" src="img/logo.png" alt="logo"><br>
+        <ul>
+            <li><a href="index.html"><i class="fa fa-home"></i><span>Početna</span></a>
+            </li>
+            <li><a href="preporuke.html"><i class="fa-solid fa-camera-retro"></i><span>Predlozi</span></a></li>
+            <li><a href="opis.html"><i class="fa fa-tasks"></i><span>Opis</span></a></li>
+            <li><a href="kontakt.html"><i class="fa fa-id-card"></i><span>Kontakt</span></a></li>
+            <i class="fa-solid fa-ball-pile"></i>
+        </ul>
+    </div>
+
+    <script id="template-ul-items" type="text/template">
+            <li>
+                {{val}}
+            </li>
+        </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

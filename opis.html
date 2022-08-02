@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Predlagač filmova </title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/x-icon" href="/img/logo1.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="js/search.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"
+        integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="header">
+        <label for="chk" class="show-btn" style="position: sticky;">
+            <i class="fa fa-bars"></i>
+        </label>
+        <label for="chk" class="hide-btn" style="position: sticky;">
+            <i class="fa fa-times"></i>
+        </label>
+
+    </div>
+
+    <input type="checkbox" name="" id="chk" style="display:none">
+
+    <div class="content">
+        <br><br>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <!-- <img src="img/logo1.png" class="response logo"> -->
+                    <div class="card mb-4">
+                        <h2 class="card-header" id="fileName">Opis</h2>
+                        <div class="card-body">
+                            <div class="displayBox scroll-box" id="fileContent">
+                                Selektujte film sa desne strane
+                            </div>
+                        </div>
+                        <div class="card-footer text-muted">
+                            <div class="social">
+
+                                <a href="https://facebook.com"><i class="fa-brands fa-facebook-f"
+                                        aria-hidden="true"></i></a>
+                                <a href="https://youtube.com"><i class="fa-brands fa-youtube"
+                                        aria-hidden="true"></i></a>
+                                <a href="https://instagram.com"><i class="fa-brands fa-instagram"
+                                        aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+               
+                    <!--Select a movie-->
+                    <div class="card my-4" id="keyword">
+                        <h5 class="card-header">Izaberi film</h5>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <ul class="list-unstyled mb-0">
+                                        <li><a href="#"
+                                                onclick="loadOpis('Titanic.txt','Titanic')">Titanic</a>
+                                        </li>
+                                        <li><a href="#" onclick="loadOpis('HarryPotter.txt', 'Harry Potter')">Harry Potter</a></li>
+                                        <li><a href="#" onclick="loadOpis('Avatar.txt', 'Avatar')">Avatar</a></li>
+                                        <li><a href="#"
+                                                onclick="loadOpis('Batman.txt','Batman')">Batman</a></li>
+                                    </ul>
+                                    <div class="card-footer" id="searchstat"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card my-4">
+
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <iframe src="https://www.youtube.com/embed/watch?v=DDhRC7mdhQE&ab_channel=SkyMusic" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>            
+                                 </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    <div class="sidebar">
+        <img class="response logo" src="img/logo.png" alt="logo"><br>
+        <ul>
+            <li><a href="index.html"><i class="fa fa-home"></i><span>Početna</span></a>
+            </li>
+            <li><a href="preporuke.html"><i class="fa-solid fa-camera-retro"></i><span>Predlozi</span></a></li>
+            <li><a href="opis.html"><i class="fa fa-tasks"></i><span>Opis</span></a></li>
+            <li><a href="kontakt.html"><i class="fa fa-id-card"></i><span>Kontakt</span></a></li>
+            <i class="fa-solid fa-ball-pile"></i>
+        </ul>
+    </div>
+
+    <script id="template-ul-items" type="text/template">
+        <li>
+            {{val}}
+        </li>
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
